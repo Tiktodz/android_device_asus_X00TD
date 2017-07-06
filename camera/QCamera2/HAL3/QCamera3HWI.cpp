@@ -2608,6 +2608,7 @@ int QCamera3HardwareInterface::configureStreamsPerfLocked(
                 "stream size : %d x %d, stream rotation = %d",
                  newStream->stream_type, newStream->format,
                 newStream->width, newStream->height, newStream->rotation);
+
         //if the stream is in the mStreamList validate it
         bool stream_exists = false;
         for (List<stream_info_t*>::iterator it=mStreamInfo.begin();
