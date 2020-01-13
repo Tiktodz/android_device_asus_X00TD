@@ -416,4 +416,10 @@
         <item>9</item> <!-- COLOR_MODE_DISPLAY_P3 -->
     </integer-array>
 
+    <!-- Enable system navigation keys. -->
+    <bool name="config_supportSystemNavigationKeys">true</bool>
+
+    <!-- Specify if the fingerprint hardware support gestures-->
+    <bool name="config_fingerprintSupportsGestures">true</bool>
+
 </resources>
