@@ -43,6 +43,7 @@ persist.sys.fuse.passthrough.enable=true
 persist.vendor.overlay.izat.optin=rro
 
 # Graphics
+debug.sf.disable_backpressure=1
 debug.hwui.skia_use_perfetto_track_events=false
 debug.hwui.skia_tracing_enabled=false
 dev.pm.dyn_samplingrate=1
