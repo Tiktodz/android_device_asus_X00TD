@@ -128,8 +128,7 @@ TARGET_BOARD_PLATFORM := sdm660
 TARGET_ENFORCES_QSSI := true
 
 # Power
-TARGET_USES_INTERACTION_BOOST := true
-TARGET_TAP_TO_WAKE_NODE := "/proc/tpd_gesture"
+TARGET_TAP_TO_WAKE_NODE := "/proc/touchpanel/double_tap_enable"
 
 # Properties
 TARGET_ODM_PROP += $(DEVICE_PATH)/properties/odm.prop
