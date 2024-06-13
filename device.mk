@@ -150,7 +150,8 @@ PRODUCT_PACKAGES += \
     android.hardware.drm@1.1.vendor \
     android.hardware.drm@1.2.vendor \
     android.hardware.drm@1.3.vendor \
-    android.hardware.drm-service.clearkey
+    android.hardware.drm-service.clearkey \
+    libhidlmemory.vendor
 
 # Fingerprint
 PRODUCT_PACKAGES += \
@@ -168,7 +169,8 @@ PRODUCT_PACKAGES += \
 
 # Gatekeeper
 PRODUCT_PACKAGES += \
-    android.hardware.gatekeeper@1.0.vendor
+    android.hardware.gatekeeper@1.0.vendor \
+    libion.vendor
 
 # GPS
 PRODUCT_PACKAGES += \
@@ -261,7 +263,8 @@ PRODUCT_COPY_FILES += \
 
 # Network
 PRODUCT_PACKAGES += \
-    android.system.net.netd@1.1.vendor
+    android.system.net.netd@1.1.vendor \
+    libnetutils.vendor
 
 # NFC
 PRODUCT_COPY_FILES += \
@@ -389,7 +392,6 @@ PRODUCT_PACKAGES += \
 
 # Radio
 PRODUCT_PACKAGES += \
-    librmnetctl \
     android.hardware.radio@1.5.vendor \
     android.hardware.radio.config@1.2 \
     android.hardware.radio.config@1.2.vendor \
@@ -397,7 +399,10 @@ PRODUCT_PACKAGES += \
     android.hardware.secure_element@1.1 \
     android.hardware.secure_element@1.2 \
     android.hardware.secure_element@1.1.vendor \
-    android.hardware.secure_element@1.2.vendor
+    android.hardware.secure_element@1.2.vendor \
+    librmnetctl \
+    libsqlite.vendor \
+    libsysutils.vendor
 
 # Recovery
 PRODUCT_PACKAGES += \
