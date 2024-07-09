@@ -3,7 +3,7 @@ git clone --depth=1 --recursive https://github.com/Tiktodz/android_kernel_asus_s
 rm -rf kernel/asus/sdm660/KernelSU/userspace
 
 rm -rf device/asus/X00TD
-git clone --depth=1 https://github.com/Tiktodz/android_device_asus_X00TD -b lineage-21-4.4 device/asus/X00TD
+git clone --depth=1 https://github.com/Tiktodz/android_device_asus_X00TD -b wip device/asus/X00TD
 
 rm -rf vendor/asus
 git clone --depth=1 https://github.com/Tiktodz/android_vendor_asus_X00TD -b udc-4.4 vendor/asus
@@ -15,10 +15,7 @@ git clone --depth=1 https://github.com/inexdroid/hardware_qcom-caf_msm8998_audio
 git clone --depth=1 https://github.com/inexdroid/hardware_qcom-caf_msm8998_display -b 14-los hardware/qcom-caf/msm8998/display
 git clone --depth=1 https://github.com/inexdroid/hardware_qcom-caf_msm8998_media -b 14 hardware/qcom-caf/msm8998/media
 
-rm -rf vendor/sakura-priv
-git clone --depth=1 https://github.com/Tiktodz/vendor -b sakura kntl && cp -R kntl/* vendor/ && rm -rf kntl
-
-rm -rf frameworks/native
-git clone --depth=1 https://github.com/SerasaOS/frameworks_native -b u frameworks/native
+rm -rf vendor/lineage-priv
+git clone --depth=1 https://github.com/Tiktodz/vendor -b blaze kntl && cp -R kntl/* vendor/ && rm -rf kntl
 
 export TZ=Asia/Jakarta

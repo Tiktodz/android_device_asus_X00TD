@@ -295,8 +295,15 @@ PRODUCT_PACKAGES += \
     android.hardware.neuralnetworks@1.3.vendor
 
 # OEM Unlock reporting
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    ro.oem_unlock_supported=1
+ifneq (eng,$(TARGET_BUILD_VARIANT))
+ifneq (,$(wildcard vendor/lineage-priv/keys/releasekey.pk8))
+PRODUCT_DEFAULT_DEV_CERTIFICATE := vendor/lineage-priv/keys/releasekey
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES := ro.oem_unlock_supported=1
+endif
+ifneq (,$(wildcard vendor/lineage-priv/keys/otakey.x509.pem))
+PRODUCT_OTA_PUBLIC_KEYS := vendor/lineage-priv/keys/otakey.x509.pem
+endif
+endif
 
 # OMX
 PRODUCT_PACKAGES += \
@@ -562,7 +569,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_BOOT_JARS += \
     WfdCommon
 
--include vendor/sakura-priv/keys/keys.mk
+-include vendor/lineage-priv/keys/keys.mk
 
 # Inherit the proprietary files
 $(call inherit-product, vendor/asus/X00TD/X00TD-vendor.mk)
