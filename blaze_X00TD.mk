@@ -15,11 +15,11 @@ $(call inherit-product, vendor/blaze/config/common_full_phone.mk)
 TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_FACE_UNLOCK_SUPPORTED := true
 BLAZE_BUILD_TYPE := OFFICIAL
-BLAZE_MAINTAINER := fakedotkit
+BLAZE_MAINTAINER := ∂σткιт
 
 # GApps flags
 TARGET_GAPPS_ARCH := arm64
-WITH_GAPPS := true
+#WITH_GAPPS := true
 
 # Inherit from X00TD device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
@@ -35,8 +35,4 @@ PRODUCT_GMS_CLIENTID_BASE := android-asus
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_DEVICE=ASUS_X00TD \
-    PRODUCT_NAME=WW_X00TD \
-    PRIVATE_BUILD_DESC="shiba-user 14 UQ1A.240205.004 11269751 release-keys"
-
-# Build fingerprint
-BUILD_FINGERPRINT := "google/shiba/shiba:14/UQ1A.240205.004/11269751:user/release-keys"
+    PRODUCT_NAME=WW_X00TD
