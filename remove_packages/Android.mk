@@ -29,6 +29,7 @@ LOCAL_OVERRIDES_PACKAGES := \
     OemDmTrigger \
     OPScreenRecord \
     Ornament \
+    PicFolder \
     PixelLiveWallpaperPrebuilt \
     PlayAutoInstallConfig \
     PrebuiltGmail \
