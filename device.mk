@@ -63,11 +63,6 @@ PRODUCT_PACKAGES += \
     AntHalService-Soong \
     com.dsi.ant@1.0.vendor
 
-# ATRACE_HAL
-PRODUCT_PACKAGES += \
-    android.hardware.atrace@1.0-service \
-    android.hardware.atrace@1.0.vendor
-
 # Bluetooth
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.0 \
@@ -366,9 +361,7 @@ PRODUCT_PACKAGES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power-service.asus_sdm660-libperfmgr \
-    android.hardware.power.stats@1.0-service.mock \
-    android.hardware.power.stats@1.0.vendor
+    android.hardware.power-service.lineage-libperfmgr
 
 # Powerhint
 PRODUCT_COPY_FILES += \
@@ -472,7 +465,8 @@ PRODUCT_COPY_FILES += \
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
     hardware/google/interfaces \
-    hardware/google/pixel
+    hardware/google/pixel \
+    hardware/blaze/interfaces/power-libperfmgr
 
 # Telephony
 PRODUCT_PACKAGES += \
