@@ -293,14 +293,14 @@ PRODUCT_PACKAGES += \
     com.android.nfc_extras \
     Tag
 
-# OEM Unlock reporting
+# Signing
 ifneq (eng,$(TARGET_BUILD_VARIANT))
-ifneq (,$(wildcard vendor/lineage-priv/keys/releasekey.pk8))
-PRODUCT_DEFAULT_DEV_CERTIFICATE := vendor/lineage-priv/keys/releasekey
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES := ro.oem_unlock_supported=1
+ifneq (,$(wildcard vendor/extra/keys/releasekey.pk8))
+PRODUCT_DEFAULT_DEV_CERTIFICATE := vendor/extra/keys/releasekey
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.oem_unlock_supported=1
 endif
-ifneq (,$(wildcard vendor/lineage-priv/keys/otakey.x509.pem))
-PRODUCT_OTA_PUBLIC_KEYS := vendor/lineage-priv/keys/otakey.x509.pem
+ifneq (,$(wildcard vendor/extra/keys/otakey.x509.pem))
+PRODUCT_OTA_PUBLIC_KEYS := vendor/extra/keys/otakey.x509.pem
 endif
 endif
 
@@ -496,6 +496,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.usb@1.3-service.basic
 
+# Verity
+PRODUCT_SYSTEM_VERITY_PARTITION=/dev/block/bootdevice/by-name/system
+PRODUCT_VENDOR_VERITY_PARTITION=/dev/block/bootdevice/by-name/vendor
+
 # Vibrator
 PRODUCT_PACKAGES += \
     android.hardware.vibrator@1.0-impl \
@@ -525,7 +529,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf \
     $(LOCAL_PATH)/wifi/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_cfg.ini
 
--include vendor/lineage-priv/keys/keys.mk
+-include vendor/extra/keys/keys.mk
 
 # Inherit the proprietary files
 $(call inherit-product, vendor/asus/X00TD/X00TD-vendor.mk)
