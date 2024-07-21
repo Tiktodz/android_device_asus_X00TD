@@ -32,10 +32,6 @@ vendor.display.disable_skip_validate=1
 # Feature flags
 persist.sys.fflag.override.settings_enable_monitor_phantom_procs=false
 
-# Fling velocity
-ro.min.fling_velocity=60
-ro.max.fling_velocity=20000
-
 # Frees More RAM
 persist.sys.purgeable_assets=1
 
@@ -47,11 +43,23 @@ persist.vendor.overlay.izat.optin=rro
 
 # Graphics
 debug.sf.disable_backpressure=1
-debug.hwui.skia_use_perfetto_track_events=false
-debug.hwui.skia_tracing_enabled=false
+debug.sf.latch_unsignaled=1
 dev.pm.dyn_samplingrate=1
 persist.demo.hdmirotationlock=false
 sdm.debug.disable_skip_validate=1
+
+# HWUI properties
+ro.hwui.texture_cache_size=72
+ro.hwui.layer_cache_size=48
+ro.hwui.r_buffer_cache_size=8
+ro.hwui.path_cache_size=32
+ro.hwui.gradient_cache_size=1
+ro.hwui.drop_shadow_cache_size=6
+ro.hwui.texture_cache_flushrate=0.4
+ro.hwui.text_small_cache_width=1024
+ro.hwui.text_small_cache_height=1024
+ro.hwui.text_large_cache_width=2048
+ro.hwui.text_large_cache_height=2048
 
 # Media
 media.settings.xml=/vendor/etc/media_profiles_vendor.xml
@@ -60,12 +68,6 @@ vidc.enc.target_support_bframe=1
 vendor.vidc.enc.disable_bframes=1
 vendor.vidc.dec.enable.downscalar=1
 vendor.vidc.enc.disable.pq=true
-
-# Iorapd
-ro.iorapd.enable=false
-iorapd.perfetto.enable=false
-iorapd.readahead.enable=false
-persist.device_config.runtime_native_boot.iorap_readahead_enable=false
 
 # Netflix
 ro.netflix.bsp_rev=Q660-13149-1
