@@ -18,9 +18,6 @@
 # Light HAL
 /(vendor|system/vendor)/bin/hw/android\.hardware\.light@2\.0-service\.asus_sdm660                u:object_r:hal_light_default_exec:s0
 
-# Light
-/(vendor|system/vendor)/bin/hw/android\.hardware\.light-service\.sdm660                           u:object_r:hal_light_default_exec:s0
-
 # Persist
 /persist(/.*)?                                                                u:object_r:mnt_vendor_file:s0
 
