@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/blaze_X00TD.mk
+    $(LOCAL_DIR)/yaap_X00TD.mk
 
 COMMON_LUNCH_CHOICES := \
-    blaze_X00TD-userdebug \
-    blaze_X00TD-user \
-    blaze_X00TD-eng
+    yaap_X00TD-userdebug \
+    yaap_X00TD-user \
+    yaap_X00TD-eng
