@@ -77,7 +77,7 @@ BOARD_KERNEL_CMDLINE += printk.devkmsg=on
 BOARD_KERNEL_BASE        := 0x00000000
 BOARD_KERNEL_PAGESIZE    := 4096
 BOARD_KERNEL_IMAGE_NAME  := Image.gz-dtb
-TARGET_KERNEL_CONFIG := vendor/X00TD_defconfig vendor/debugfs.config
+TARGET_KERNEL_CONFIG := vendor/X00TD_defconfig
 TARGET_KERNEL_SOURCE := kernel/asus/sdm660
 TARGET_KERNEL_VERSION := 4.19
 
@@ -124,7 +124,6 @@ BOARD_ROOT_EXTRA_SYMLINKS := \
     /mnt/vendor/persist:/persist
 
 # Platform
-TARGET_BOARD_PLATFORM := sdm660
 TARGET_ENFORCES_QSSI := true
 
 # Power
@@ -160,7 +159,7 @@ PRODUCT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
 PRODUCT_SOONG_NAMESPACES += $(DEVICE_PATH)
 
 # Treble
-BOARD_VNDK_VERSION := current
+#BOARD_VNDK_VERSION := current
 
 # Vendor Security patch level
 VENDOR_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH)
