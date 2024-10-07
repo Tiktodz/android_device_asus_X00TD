@@ -505,7 +505,7 @@ PRODUCT_EXTRA_VNDK_VERSIONS := 30 31 32
 PRODUCT_PACKAGES += \
     android.hardware.wifi-service \
     hostapd \
-    libwifi-hal-qcom \
+    libcld80211 \
     libwpa_client \
     TetheringConfigOverlay \
     X00TDWifiOverlay \
